@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import os
 # https://dblp.uni-trier.de/db/journals/tnn/tnn30.html
 def  getlist(url):
-	# 
 	res = requests.get(url)
 	soup = BeautifulSoup(res.content,'html.parser')
 	soup2=soup.find_all('li', {"class": "entry article"})
@@ -23,8 +22,6 @@ def createPath(path):
 		os.makedirs(path)
 	return path
 
-
 if __name__ == '__main__':
-
 	url = "https://dblp.uni-trier.de/db/journals/tnn/tnn30.html"
 	print('total:',getlist(url))
