@@ -7,7 +7,6 @@ from get_list0 import *
 import time
 
 def getIEETNNPapers(lines,despath,si,ei):
-
     ff = open(despath+'error.txt', 'a')
     i = si
     llen = len(lines)
